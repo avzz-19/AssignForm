@@ -7,9 +7,11 @@ const App=()=>{
     <form>
     <h1>Registration Form</h1>
         <TextEntry/>
+        <TextEntry/>
+        <TextEntry/>
         <BulletEntry/>
         <Attatchments/>
-        <button>Submit</button>
+        <button class="submit" style={{backgroundColor:"#8D19FFB2"}}>Submit</button>
     </form>
     </div>
 }
@@ -21,7 +23,7 @@ const Header=()=>{
 }
 const TextEntry=()=>{
     return <div>
-        <h5></h5>
+        <h5>Text Inputs</h5>
         <input type="text"></input>
     </div>
 }
@@ -36,7 +38,8 @@ const BulletEntry=()=>{
 }
 const Attatchments=()=>{
     return <div>
-        <h5></h5>
+    <h3>ATTATCHMENTS</h3>
+        <h5>Add Resume/CV</h5>
         <button>Choose File</button>
     </div>
 }
