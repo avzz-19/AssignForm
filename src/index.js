@@ -31,6 +31,7 @@ const Header = () => {
 const App = () => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
+  const [middleName, setMiddleName] = useState("");
   const [gender, setGender] = useState("");
 
   return (
@@ -59,10 +60,10 @@ const App = () => {
             type="text"
             label={<TextComponent label="Middle Name:" styleProps={{ fontSize: "16px", textAlign: "left", fontWeight: 700 }}/>}
             placeholder="Enter middle name"
-            value={lastName}
+            value={middleName}
             onChange={(a) => {
               console.log(a.target.value);
-              setLastName(a.target.value);
+              setMiddleName(a.target.value);
             }}
           />
           <InputComponent
