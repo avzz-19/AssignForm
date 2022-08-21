@@ -10,17 +10,18 @@ const Header = () => {
         justifyContent: "center",
         alignItems: "center",
         color:"white",
-        fontFamily:"Helvetica"
+        fontFamily:"Helvetica",
+        fontWeight:"700"
       }}
     >
       <TextComponent
         label="INCRESCO TECHNOLOGIES"
-        styleProps={{ fontSize: "48px", textAlign: "left"}}
+        styleProps={{ fontSize: "48px", textAlign: "center"}}
       />
       <br></br>
       <TextComponent
         label="CAMPUS HIRING 2023"
-        styleProps={{ fontSize: "36px", textAlign: "left"}}
+        styleProps={{ fontSize: "36px", textAlign: "center"}}
       />
     </div>
   );
@@ -33,13 +34,15 @@ const App = () => {
   const [lastName, setLastName] = useState("");
   const [middleName, setMiddleName] = useState("");
   const [gender, setGender] = useState("");
+  const [mail, setEmail] = useState("");
+  const [number, setNumber]=useState("");
 
   return (
     <div>
       <Header />
-      <TextComponent label="*Required"/>
+      <TextComponent label="*Required" styleProps={{margin:"10px"}}/>
       <form>
-        <h1>Registration Form</h1>
+        <TextComponent label="Registration Form" styleProps={{fontWeight: 700, fontSize: "48px", margin:"10px"}}/>
         <Box header="Job Details">
             <InputComponent type="text" placeholder="Software Developer" disabled 
             label={<TextComponent label="Job Profile:" isMandatory="true" styleProps={{ fontSize: "16px", textAlign: "left", fontWeight: 700 }}/>}
@@ -52,7 +55,6 @@ const App = () => {
             placeholder="Enter First name"
             value={firstName}
             onChange={(a) => {
-              console.log(a.target.value);
               setFirstName(a.target.value);
             }}
           />
@@ -62,7 +64,6 @@ const App = () => {
             placeholder="Enter middle name"
             value={middleName}
             onChange={(a) => {
-              console.log(a.target.value);
               setMiddleName(a.target.value);
             }}
           />
@@ -72,19 +73,29 @@ const App = () => {
             placeholder="Enter last name"
             value={lastName}
             onChange={(a) => {
-              console.log(a.target.value);
               setLastName(a.target.value);
             }}
           />
           <InputComponent
-            type="text"
+            type="email"
             label={<TextComponent label="Email:" isMandatory="true" styleProps={{ fontSize: "16px", textAlign: "left", fontWeight: 700 }}/>}
             placeholder="@gmail.com"
+            value={mail}
+            onChange={(a) => {
+              setEmail(a.target.value);
+            }}
           />
           <InputComponent
             type="text"
+            pattern="[0-9]+"
+            value={number}
             label={<TextComponent label="Contact Number:" isMandatory="true" styleProps={{ fontSize: "16px", textAlign: "left", fontWeight: 700 }}/>}
             placeholder="123456789"
+            maxlength="10"
+            minlength="10"
+            onChange={(a)=>{
+                setNumber(a.target.value);
+            }}
           />
           <DatePick/>
           <TextComponent label="Gender" isMandatory="true"
@@ -92,31 +103,28 @@ const App = () => {
         />
           <InputComponent
             type="radio"
-            value="Male"
+            value={gender}
             name="gender"
             label="Male"
             onChange={(a) => {
-              console.log(a.target.value);
               setGender(a.target.value);
             }}
           />
           <InputComponent
             type="radio"
-            value="Female"
+            value={gender}
             name="gender"
             label="Female"
             onChange={(a) => {
-              console.log(a.target.value);
               setGender(a.target.value);
             }}
           />
           <InputComponent
             type="radio"
-            value="Other"
+            value={gender}
             name="gender"
             label="Other"
             onChange={(a) => {
-              console.log(a.target.value);
               setGender(a.target.value);
             }}
           />
