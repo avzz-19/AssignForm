@@ -40,7 +40,7 @@ export const Box = (props) => (
 )
 
 export const DatePick=()=>
-{   return <div><label>{<TextComponent label="DOB-(DD/MM/YY)" isMandatory="true" styleProps={{ fontSize: "16px", textAlign: "left", fontWeight: 700 }}/>}</label>
+{   return <div><label>{<TextComponent label="DOB-(DD/MM/YY)" isMandatory="true" styleProps={{ fontSize: "16px", textAlign: "left", fontWeight: 700 ,paddingTop:"10px"}}/>}</label>
             <input type="date" name="DOB"/>
             </div>
 }

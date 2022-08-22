@@ -16,12 +16,12 @@ const Header = () => {
     >
       <TextComponent
         label="INCRESCO TECHNOLOGIES"
-        styleProps={{ fontSize: "48px", textAlign: "center"}}
+        styleProps={{ fontSize: "48px", textAlign: "center" ,paddingTop:"15px"}}
       />
       <br></br>
       <TextComponent
         label="CAMPUS HIRING 2023"
-        styleProps={{ fontSize: "36px", textAlign: "center"}}
+        styleProps={{ fontSize: "36px", textAlign: "center",paddingBottom:"15px"}}
       />
     </div>
   );
@@ -44,14 +44,15 @@ const App = () => {
       <form>
         <TextComponent label="Registration Form" styleProps={{fontWeight: 700, fontSize: "48px", margin:"10px"}}/>
         <Box header="Job Details">
-            <InputComponent type="text" placeholder="Software Developer" disabled 
+            <InputComponent type="text" placeholder="Software Developer" disabled style={{height:"2em"}}
             label={<TextComponent label="Job Profile:" isMandatory="true" styleProps={{ fontSize: "16px", textAlign: "left", fontWeight: 700 }}/>}
             />
         </Box>
         <Box header="Personal Details">
           <InputComponent
             type="text"
-            label={<TextComponent label="First Name:" isMandatory="true" styleProps={{ fontSize: "16px", textAlign: "left", fontWeight: 700 }}/>}
+            style={{height:"2em"}}
+            label={<TextComponent label="First Name:" isMandatory="true" styleProps={{ fontSize: "16px", textAlign: "left", fontWeight: 700 ,paddingTop:"10px"}}/>}
             placeholder="Enter First name"
             value={firstName}
             onChange={(a) => {
@@ -60,7 +61,8 @@ const App = () => {
           />
           <InputComponent
             type="text"
-            label={<TextComponent label="Middle Name:" styleProps={{ fontSize: "16px", textAlign: "left", fontWeight: 700 }}/>}
+            style={{height:"2em"}}
+            label={<TextComponent label="Middle Name:" styleProps={{ fontSize: "16px", textAlign: "left", fontWeight: 700,paddingTop:"10px" }}/>}
             placeholder="Enter middle name"
             value={middleName}
             onChange={(a) => {
@@ -69,7 +71,8 @@ const App = () => {
           />
           <InputComponent
             type="text"
-            label={<TextComponent label="Last Name:" isMandatory="true" styleProps={{ fontSize: "16px", textAlign: "left", fontWeight: 700 }}/>}
+            style={{height:"2em"}}
+            label={<TextComponent label="Last Name:" isMandatory="true" styleProps={{ fontSize: "16px", textAlign: "left", fontWeight: 700,paddingTop:"10px" }}/>}
             placeholder="Enter last name"
             value={lastName}
             onChange={(a) => {
@@ -78,7 +81,8 @@ const App = () => {
           />
           <InputComponent
             type="email"
-            label={<TextComponent label="Email:" isMandatory="true" styleProps={{ fontSize: "16px", textAlign: "left", fontWeight: 700 }}/>}
+            style={{height:"2em"}}
+            label={<TextComponent label="Email:" isMandatory="true" styleProps={{ fontSize: "16px", textAlign: "left", fontWeight: 700,paddingTop:"10px" }}/>}
             placeholder="@gmail.com"
             value={mail}
             onChange={(a) => {
@@ -87,9 +91,10 @@ const App = () => {
           />
           <InputComponent
             type="text"
+            style={{height:"2em"}}
             pattern="[0-9]+"
             value={number}
-            label={<TextComponent label="Contact Number:" isMandatory="true" styleProps={{ fontSize: "16px", textAlign: "left", fontWeight: 700 }}/>}
+            label={<TextComponent label="Contact Number:" isMandatory="true" styleProps={{ fontSize: "16px", textAlign: "left", fontWeight: 700 ,paddingTop:"10px"}}/>}
             placeholder="123456789"
             maxlength="10"
             minlength="10"
@@ -99,7 +104,7 @@ const App = () => {
           />
           <DatePick/>
           <TextComponent label="Gender" isMandatory="true"
-            styleProps={{ fontSize: "16px", textAlign: "left", fontWeight: 700 }}
+            styleProps={{ fontSize: "16px", textAlign: "left", fontWeight: 700 ,paddingTop:"10px"}}
         />
           <InputComponent
             type="radio"
@@ -132,46 +137,50 @@ const App = () => {
         <Box header="Educational Details">
             <TextComponent
                     label="Lowest Educational profile"
-                    styleProps={{ fontSize: "16px", textAlign: "left", fontWeight: 700 }}
+                    styleProps={{ fontSize: "16px", textAlign: "left", fontWeight: 700 ,paddingTop:"10px"}}
             />
           <InputComponent
+                style={{height:"2em"}}
                 type="text"
                 label={<TextComponent
                     label="10th percentage %"
-                    styleProps={{ fontSize: "16px", textAlign: "left", fontWeight: 700 }}
+                    styleProps={{ fontSize: "16px", textAlign: "left", fontWeight: 700 ,paddingTop:"10px"}}
                     isMandatory
                 />}
             />
             <InputComponent
                 type="text"
+                style={{height:"2em"}}
                 label={<TextComponent
                     label="12th percentage %"
-                    styleProps={{ fontSize: "16px", textAlign: "left", fontWeight: 700 }}
+                    styleProps={{ fontSize: "16px", textAlign: "left", fontWeight: 700 ,paddingTop:"10px"}}
                     isMandatory
                 />}
             />
             <TextComponent
                     label="Highest Educational profile"
-                    styleProps={{ fontSize: "16px", textAlign: "left", fontWeight: 700 }}
+                    styleProps={{ fontSize: "16px", textAlign: "left", fontWeight: 700 ,paddingTop:"10px"}}
             />
             <TextComponent
                     label="Education Type"
                     isMandatory
-                    styleProps={{ fontSize: "16px", textAlign: "left", fontWeight: 700 }}
+                    styleProps={{ fontSize: "16px", textAlign: "left", fontWeight: 700 ,paddingTop:"10px"}}
             />
           <Dropdown placeholder="-select-"/>
           <InputComponent
+                style={{height:"2em"}}
                 type="text"
                 placeholder="BE"
                 label={<TextComponent
                     label="Degree"
-                    styleProps={{ fontSize: "16px", textAlign: "left", fontWeight: 700 }}
+                    styleProps={{ fontSize: "16px", textAlign: "left", fontWeight: 700 ,paddingTop:"10px"}}
                     isMandatory
                     
                 />}
             />
             <InputComponent
                 type="text"
+                style={{height:"2em"}}
                 placeholder="College"
                 label={<TextComponent
                     label="College"
@@ -181,28 +190,31 @@ const App = () => {
             />
             <InputComponent
                 type="text"
+                style={{height:"2em"}}
                 placeholder="R19CS480"
                 label={<TextComponent
                     label="Reg.No"
-                    styleProps={{ fontSize: "16px", textAlign: "left", fontWeight: 700 }}
+                    styleProps={{ fontSize: "16px", textAlign: "left", fontWeight: 700,paddingTop:"10px" }}
                     isMandatory
                 />}
             />
             <InputComponent
                 type="text"
+                style={{height:"2em"}}
                 placeholder="Computer Science Engineering"
                 label={<TextComponent
                     label="Branch"
-                    styleProps={{ fontSize: "16px", textAlign: "left", fontWeight: 700 }}
+                    styleProps={{ fontSize: "16px", textAlign: "left", fontWeight: 700 ,paddingTop:"10px"}}
                     isMandatory
                 />}
             />
             <InputComponent
                 type="text"
+                style={{height:"2em"}}
                 placeholder="No"
                 label={<TextComponent
                     label="Backlogs"
-                    styleProps={{ fontSize: "16px", textAlign: "left", fontWeight: 700 }}
+                    styleProps={{ fontSize: "16px", textAlign: "left", fontWeight: 700 ,paddingTop:"10px"}}
                     isMandatory
                 />}
             />
@@ -210,7 +222,7 @@ const App = () => {
         <Box header="ATTATCHMENTS">
         <Attatchments />
         </Box>
-        <button className="submit" style={{ backgroundColor: "#8D19FFB2"}}>
+        <button className="submit" style={{ backgroundColor: "#8D19FFB2",padding:"5px",margin:"10px",borderRadius:"10"}}>
           Submit
         </button>
       </form>
