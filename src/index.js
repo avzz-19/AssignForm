@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
 import { TextComponent, InputComponent, Box, DatePick, Dropdown ,Attatchments } from "./Components";
+///import styled from "styled-components";
 
 const Header = () => {
   return (
@@ -41,7 +42,7 @@ const App = () => {
     <div>
       <Header />
       <TextComponent label="*Required" styleProps={{margin:"10px"}}/>
-      <form>
+      <div>
         <TextComponent label="Registration Form" styleProps={{fontWeight: 700, fontSize: "48px", margin:"10px"}}/>
         <Box header="Job Details">
             <InputComponent type="text" placeholder="Software Developer" disabled style={{height:"2em"}}
@@ -184,7 +185,7 @@ const App = () => {
                 placeholder="College"
                 label={<TextComponent
                     label="College"
-                    styleProps={{ fontSize: "16px", textAlign: "left", fontWeight: 700 }}
+                    styleProps={{ fontSize: "16px", textAlign: "left", fontWeight: 700 ,paddingTop:"10px"}}
                     isMandatory
                 />}
             />
@@ -222,10 +223,10 @@ const App = () => {
         <Box header="ATTATCHMENTS">
         <Attatchments />
         </Box>
-        <button className="submit" style={{ backgroundColor: "#8D19FFB2",padding:"5px",margin:"10px",borderRadius:"10"}}>
+        <button className="submit" style={{ backgroundColor: "#8D19FFB2",padding:"8px",margin:"10px",borderRadius:"10"}}>
           Submit
         </button>
-      </form>
+      </div>
     </div>
   );
 };
