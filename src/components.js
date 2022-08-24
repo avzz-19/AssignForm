@@ -45,18 +45,18 @@ export const DatePick=()=>
             </div>
 }
 
-export const Dropdown=()=>{
-    return <div>
-        <select>  
-            <option value = ""> undergraduate   
-            </option>  
-            <option value = ""> postgraduate   
-            </option>   
-            <option value = ""> diploma  
-            </option>  
-        </select>  
-    </div>
-}
+export const Dropdown = (props) => {
+    //console.log({props})
+    return (
+      <div>
+        <select>
+          {props.options?.map((m) => (
+            <option value={m}>{m}</option>
+          ))}
+        </select>
+      </div>
+    );
+  };
 
 export const Attatchments=()=>{
     return <>
