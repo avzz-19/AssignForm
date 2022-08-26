@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 //import ReactDOM from "react-dom";
 import {
   TextComponent,
@@ -9,6 +9,7 @@ import {
   Attatchments,
 } from "./Components";
 import GlobalStyle from "./globalStyles";
+import { postReq } from "../pages/index";
 
 const Header = () => {
   return (
@@ -45,13 +46,35 @@ const Header = () => {
 };
 
 export const App = ({ data }) => {
+  const postReqCall= async () => {
+    let res = await postReq(JSON.stringify({
+      firstName:firstName,
+      middleName: middleName,
+      lastName: lastName,
+      email: mail,
+      contactNumber: number,
+      gender: gender, 
+    }));
+    console.log("res", res);
+  };
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [middleName, setMiddleName] = useState("");
   const [gender, setGender] = useState("");
   const [mail, setEmail] = useState("");
   const [number, setNumber] = useState("");
-  
+  // const [reg, setReg] = useState([]);
+
+  // useEffect(() => {
+  //   let mounted = true;
+  //   postReq()
+  //     .then(items => {
+    //     if(mounted) {
+    //       setReg(items)
+    //     }
+    //   })
+    // return () => mounted = false;
+  // }, [])
   return (
     <div>
       <GlobalStyle />
@@ -289,7 +312,7 @@ export const App = ({ data }) => {
               paddingTop: "10px",
             }}
           />
-          
+
           <Dropdown options={[...data[2].map((a) => a.displayText)]} />
           <TextComponent
             label="Degree"
@@ -365,14 +388,17 @@ export const App = ({ data }) => {
         </Box>
         <button
           className="submit"
+          role="button"
+          onClick={postReqCall}
           style={{
             backgroundColor: "#8D19FFB2",
             padding: "8px",
             margin: "10px",
-            borderRadius: "10",
+            borderRadius: "10px",
+            float: "right",
           }}
         >
-          Submit
+          SUBMIT
         </button>
       </div>
     </div>
