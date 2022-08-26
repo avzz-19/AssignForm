@@ -7,7 +7,7 @@ import {
   DatePick,
   Dropdown,
   Attatchments,
-} from "./Components";
+} from "./components";
 import GlobalStyle from "./globalStyles";
 import { postReq } from "../pages/index";
 
